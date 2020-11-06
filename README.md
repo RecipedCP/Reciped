@@ -71,7 +71,6 @@ Reciped is a app that allows users to post their recipes: photos, ingredients, a
 * Profile -> Shows the users posts
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="wireframe.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
