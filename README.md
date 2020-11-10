@@ -110,7 +110,3 @@ Reciped is a app that allows users to post their recipes: photos, ingredients, a
       - (Read/GET) Query all posts of user
       - (Read/GET) Query logged in user object
 
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
