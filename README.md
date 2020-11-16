@@ -1,3 +1,4 @@
+
 Reciped - README Template
 ===
 
@@ -33,10 +34,9 @@ Reciped is a app that allows users to post their recipes: photos, ingredients, a
     * Homepage: where you can see everyones posts
     * Createpage: where you can create a post of your recipes (pictures, videos, other descriptions)
     * Recipe Book page: shows all of the liked/saved recipes
-    * Profile page: contain all posts of user, can also logout 
+    * Profile page: contain all posts of user, can also logout
 
 **Optional Nice-to-have Stories**
-
 * Explore page: can find other recipes, based on categories
 
 ### 2. Screen Archetypes
