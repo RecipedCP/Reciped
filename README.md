@@ -109,4 +109,10 @@ Reciped is a app that allows users to post their recipes: photos, ingredients, a
    - Profile Screen
       - (Read/GET) Query all posts of user
       - (Read/GET) Query logged in user object
+      
+## Gif Walkthroughs:
+
+Walkthrough 1: 
+
+<img src='walkthrough1.gif' width='' alt='Video Walkthrough' />
 
