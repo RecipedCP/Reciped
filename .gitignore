@@ -17,3 +17,11 @@ local.properties
 
 /.idea/misc.xml
 /.idea/modules/app/app.iml
+
+/.gradle/6.1.1/fileHashes/fileHashes.bin
+/.gradle/6.1.1/fileHashes/fileHashes.lock
+/.idea/caches/build_file_checksums.ser
+/.idea/codeStyles/Project.xml
+/.idea/libraries/Gradle__com_github_parse_community_Parse_SDK_Android_parse_1_18_5_aar.xml
+/.idea/modules/app/app.iml
+/local.properties
