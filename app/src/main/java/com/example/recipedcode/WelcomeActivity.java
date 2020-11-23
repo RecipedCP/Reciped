@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.parse.ParseUser;
+//import com.parse.ParseUser;
 
 public class WelcomeActivity extends AppCompatActivity {
 
