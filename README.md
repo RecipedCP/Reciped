@@ -29,7 +29,7 @@ Reciped is a app that allows users to post their recipes: photos, ingredients, a
 
 **Required Must-have Stories**
 
-* User login / signup page
+* [x]User login / signup page
 * Main pages
     * Homepage: where you can see everyones posts
     * Createpage: where you can create a post of your recipes (pictures, videos, other descriptions)
