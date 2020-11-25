@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.parse.ParseUser;
+
 //import com.parse.ParseUser;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -23,9 +25,9 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-//        if(ParseUser.getCurrentUser() != null) {
-////            goMainActivity();
-////        }
+        if(ParseUser.getCurrentUser() != null) {
+            goMainActivity();
+        }
 
         btnLogin = findViewById(R.id.btnLogin);
         btnSignup = findViewById(R.id.btnSignup);
