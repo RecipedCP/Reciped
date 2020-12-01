@@ -116,3 +116,7 @@ Walkthrough 1:
 
 <img src='walkthrough1.gif' width='' alt='Video Walkthrough' />
 
+Walkthrough 2: 
+
+<img src='walkthrough2.gif' width='' alt='Video Walkthrough' />
+
