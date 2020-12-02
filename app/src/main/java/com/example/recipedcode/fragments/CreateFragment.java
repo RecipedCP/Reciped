@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -65,7 +67,22 @@ public class CreateFragment extends Fragment {
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchCamera();
+//                CreatePostFragment nextFrag = new CreatePostFragment();
+////                getActivity().getSupportFragmentManager().beginTransaction()
+////                        .replace(R.id.fgCreate, nextFrag, "findThisFragment")
+////                        .addToBackStack(null)
+////                        .commit();
+//                Fragment fragment = new CreatePostFragment();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.fgCreate, fragment);
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
+                Fragment fragment = new CreatePostFragment();
+
+                FragmentManager fragmentManager = getFragmentManager();
+
+                fragmentManager.beginTransaction().replace(R.id.fgCreate, fragment).commit();
             }
         });
     }
