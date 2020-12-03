@@ -22,7 +22,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.recipedcode.Post;
 import com.example.recipedcode.R;
+import com.parse.ParseException;
+import com.parse.ParseFile;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 import java.io.File;
 
@@ -46,6 +51,7 @@ public class CreatePostFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        launchCamera();
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_create_post, container, false);
     }
@@ -56,29 +62,52 @@ public class CreatePostFragment extends Fragment {
         btnCaptureImage = view.findViewById(R.id.btnCaptureImage);
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnSubmit = view.findViewById(R.id.btnSubmit);
-        launchCamera();
         super.onViewCreated(view, savedInstanceState);
 
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String description = etDescription.getText().toString();
+                if (description.isEmpty()) {
+                    Toast.makeText(getContext(), "Description cannot be empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (photoFile == null || ivPostImage.getDrawable() == null) {
+                    Toast.makeText(getContext(), "There is no image!", Toast.LENGTH_SHORT).show();
+                    return;
+
+                }
+                System.out.println("***************setting up parseuser****************");
+                System.out.println("***************setting up savingpost****************");
+                ParseUser currentUser = ParseUser.getCurrentUser();
+                System.out.println("***************called parseuser****************");
+                savePost(description, currentUser, photoFile);
+                System.out.println("***************called savingpost****************");
+            }
+        });
     }
 
-    //    private void savePost(String description, ParseUser currentUser, File photoFile) {
-//        Post post = new Post();
-//        post.setDescription(description);
-//        post.setImage(new ParseFile(photoFile));
-//        post.setUser(currentUser);
-//        post.saveInBackground(new SaveCallback() {
-//            @Override
-//            public void done(ParseException e) {
-//                if (e != null) {
-//                    Log.e(TAG, "Error while saving", e);
-//                    Toast.makeText(getContext(), "Errors while saving!", Toast.LENGTH_SHORT).show();
-//                }
-//                Log.i(TAG, "Post save was successful");
-//                etDescription.setText("");
-//                ivPostImage.setImageResource(0);
-//            }
-//        });
-//    }
+    private void savePost(String description, ParseUser currentUser, File photoFile) {
+            System.out.println("********************** about to save attributes into post*********************");
+            Post post = new Post();
+            System.out.println("********************** created postt*********************");
+            post.setDescription(description);
+            post.setImage(new ParseFile(photoFile));
+            post.setUser(currentUser);
+            System.out.println("***************saved all attributes into post****************");
+            post.saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if (e != null) {
+                        Log.e(TAG, "Error while saving", e);
+                        Toast.makeText(getContext(), "Errors while saving!", Toast.LENGTH_SHORT).show();
+                    }
+                    Log.i(TAG, "Post save was successful");
+                    etDescription.setText("");
+                    ivPostImage.setImageResource(0);
+                }
+            });
+    }
 
     private void launchCamera() {
         // create Intent to take a picture and return control to the calling application
@@ -131,5 +160,4 @@ public class CreatePostFragment extends Fragment {
         return new File(mediaStorageDir.getPath() + File.separator + fileName);
 
     }
-
 }
