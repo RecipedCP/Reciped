@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="0dp"
-    android:background="@drawable/background"
+    android:background="@drawable/background2"
     tools:context=".WelcomeActivity">
 
     <ImageView
@@ -20,16 +20,17 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="170dp"
-        android:layout_height="95dp"
+        android:layout_width="178dp"
+        android:layout_height="85dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginBottom="12dp"
         android:layout_weight="1"
-        android:background="#FDF9F9"
+
+        android:background="@drawable/custom_rounded_corners"
         android:text="Login"
         android:textColor="#000000"
         android:textSize="25sp"
@@ -37,18 +38,18 @@
 
     <Button
         android:id="@+id/btnSignup"
-        android:layout_width="170dp"
-        android:layout_height="95dp"
+        android:layout_width="178dp"
+        android:layout_height="85dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="200dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="218dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="12dp"
         android:layout_weight="1"
-        android:background="#000000"
+        android:background="@drawable/custom_rounded_corners"
         android:text="Signup"
-        android:textColor="#FBFBFB"
+        android:textColor="#000000"
         android:textSize="25sp"
         android:textStyle="bold" />
 </RelativeLayout>

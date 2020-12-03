@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="0dp"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background2"
     tools:context=".LoginActivity">
 
 
@@ -25,9 +26,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="473dp"
+        android:layout_marginBottom="300dp"
         android:layout_weight="1"
-        android:background="#86D5E9FA"
+        android:background="@drawable/custom_rounded_corners_input"
         android:ems="10"
         android:hint="Username"
         android:textAlignment="center" />
@@ -41,9 +42,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="319dp"
+        android:layout_marginBottom="150dp"
         android:layout_weight="1"
-        android:background="#86D5E9FA"
+        android:background="@drawable/custom_rounded_corners_input"
         android:ems="10"
 
         android:hint="Password"
@@ -57,27 +58,27 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="74dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="20dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_blue_light"
+        android:background="@drawable/custom_rounded_corners"
         android:text="Log In"
         android:textSize="25sp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnBack"
-        android:layout_width="116dp"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="145dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginBottom="575dp"
-        android:layout_weight="1"
-        android:text="Button"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="267dp"
+        android:layout_marginBottom="531dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:text="Go back"
         android:textSize="10sp"
         android:textStyle="bold" />
 
