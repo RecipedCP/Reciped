@@ -21,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etPassword;
     private Button btnLogin;
+    private Button btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         ivLogo = findViewById(R.id.ivLogo);
         btnLogin = findViewById(R.id.btnLogin);
+        btnBack = findViewById(R.id.btnBack);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +42,24 @@ public class LoginActivity extends AppCompatActivity {
                 loginUser(username, password);
             }
         });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "onClick back button");
+                goWelcomeActivity();
+            }
+        });
     }
 
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
+
+    private void goWelcomeActivity() {
+        Intent i = new Intent(this, WelcomeActivity.class);
         startActivity(i);
         finish();
     }
