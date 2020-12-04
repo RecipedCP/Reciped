@@ -37,8 +37,9 @@ public class CreatePostFragment extends Fragment {
 
     public static final String TAG = "CreatePostFragment";
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;
+    private EditText etCaption;
     private EditText etDescription;
-    private Button btnCaptureImage;
+    private Button btnRetakeImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
     private File photoFile;
@@ -58,8 +59,9 @@ public class CreatePostFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        etCaption = view.findViewById(R.id.etCaption);
         etDescription = view.findViewById(R.id.etDescription);
-        btnCaptureImage = view.findViewById(R.id.btnCaptureImage);
+        btnRetakeImage = view.findViewById(R.id.btnRetakeImage);
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnSubmit = view.findViewById(R.id.btnSubmit);
         super.onViewCreated(view, savedInstanceState);
@@ -67,6 +69,11 @@ public class CreatePostFragment extends Fragment {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String caption = etCaption.getText().toString();
+                if (caption.isEmpty()) {
+                    Toast.makeText(getContext(), "Caption cannot be empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 String description = etDescription.getText().toString();
                 if (description.isEmpty()) {
                     Toast.makeText(getContext(), "Description cannot be empty", Toast.LENGTH_SHORT).show();
@@ -81,16 +88,17 @@ public class CreatePostFragment extends Fragment {
                 System.out.println("***************setting up savingpost****************");
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 System.out.println("***************called parseuser****************");
-                savePost(description, currentUser, photoFile);
+                savePost(caption, description, currentUser, photoFile);
                 System.out.println("***************called savingpost****************");
             }
         });
     }
 
-    private void savePost(String description, ParseUser currentUser, File photoFile) {
+    private void savePost(String caption, String description, ParseUser currentUser, File photoFile) {
             System.out.println("********************** about to save attributes into post*********************");
             Post post = new Post();
             System.out.println("********************** created postt*********************");
+            post.setCaption(caption);
             post.setDescription(description);
             post.setImage(new ParseFile(photoFile));
             post.setUser(currentUser);

@@ -8,23 +8,30 @@
     tools:context=".fragments.CreatePostFragment">
 
     <EditText
-        android:id="@+id/etDescription"
+        android:id="@+id/etCaption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Description..." />
+        android:hint="Caption" />
 
     <Button
-        android:id="@+id/btnCaptureImage"
+        android:id="@+id/btnRetakeImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Take Picture" />
+        android:text="Retake Picture" />
 
     <ImageView
         android:id="@+id/ivPostImage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="List your indgredients here..."
+        android:lines="5" />
 
     <Button
         android:id="@+id/btnSubmit"

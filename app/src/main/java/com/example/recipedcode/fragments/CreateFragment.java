@@ -66,7 +66,7 @@ public class CreateFragment extends Fragment {
 
                 FragmentManager fragmentManager = getFragmentManager();
 
-                fragmentManager.beginTransaction().replace(R.id.fgCreate, fragment).commit();
+                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
             }
         });
     }
