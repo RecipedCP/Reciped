@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fgCreatePost"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".fragments.CreatePostFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.UploadPostFragment"
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/etCaption"
@@ -15,10 +15,10 @@
         android:hint="Caption" />
 
     <Button
-        android:id="@+id/btnRetakeImage"
+        android:id="@+id/btnReuploadImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Retake Picture" />
+        android:text="Reupload Picture" />
 
     <ImageView
         android:id="@+id/ivPostImage"

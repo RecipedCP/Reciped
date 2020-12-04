@@ -38,7 +38,7 @@ public class CreateFragment extends Fragment {
     public static final String TAG = "CreateFragment";
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;
     private Button btnCreate;
-
+    private Button btnUpload;
 
     private File photoFile;
     public String photoFileName = "photo.jpg";
@@ -58,11 +58,24 @@ public class CreateFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         btnCreate = view.findViewById(R.id.btnCreate);
+        btnUpload = view.findViewById(R.id.btnUpload);
+
         
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new CreatePostFragment();
+
+                FragmentManager fragmentManager = getFragmentManager();
+
+                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
+            }
+        });
+
+        btnUpload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 Fragment fragment = new UploadPostFragment();
 
                 FragmentManager fragmentManager = getFragmentManager();
 
