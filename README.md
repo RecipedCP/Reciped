@@ -120,3 +120,8 @@ Walkthrough 2:
 
 <img src='walkthrough2.gif' width='' alt='Video Walkthrough' />
 
+Walkthrough 3: 
+
+<img src='walkthrough3.gif' width='' alt='Video Walkthrough' />
+
+
