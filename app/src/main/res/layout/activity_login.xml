@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="0dp"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background2"
+    android:background="@drawable/background3"
     tools:context=".LoginActivity">
 
 
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+        android:src="@drawable/logo" />
 
     <EditText
         android:id="@+id/etUsername"
@@ -26,7 +26,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="260dp"
         android:layout_weight="1"
         android:background="@drawable/custom_rounded_corners_input"
         android:ems="10"
@@ -42,7 +42,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="130dp"
         android:layout_weight="1"
         android:background="@drawable/custom_rounded_corners_input"
         android:ems="10"
@@ -69,14 +69,14 @@
 
     <Button
         android:id="@+id/btnBack"
-        android:layout_width="133dp"
-        android:layout_height="40dp"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="267dp"
-        android:layout_marginBottom="531dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="490dp"
         android:background="@drawable/custom_rounded_corners"
         android:text="Go back"
         android:textSize="10sp"
