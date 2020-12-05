@@ -6,7 +6,7 @@
     android:layout_margin="0dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background4"
+    android:background="@drawable/background6"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#F1A8A8"
+        android:background="#e8994a"
         app:menu="@menu/menu_bottom_navigation" />
 
 </RelativeLayout>
