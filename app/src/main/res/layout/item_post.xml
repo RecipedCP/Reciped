@@ -49,38 +49,37 @@
         android:inputType="textMultiLine"
         tools:text="Ingredients:" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mlDescription"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00A82D2D"
+        android:cropToPadding="false"
+        android:padding="10dp"
+        app:srcCompat="@android:drawable/btn_star" />
+
+    <ImageButton
+        android:id="@+id/btnComment"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/mlDescription"
+        android:layout_toEndOf="@+id/btnLike"
+        android:background="#00FFFFFF"
+        android:padding="10dp"
+        app:srcCompat="@android:drawable/stat_notify_chat" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mlDescription"
         android:layout_alignParentStart="false"
         android:layout_alignParentBottom="false"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        tools:text="Like" />
-
-    <Button
-        android:id="@+id/btnComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mlDescription"
-        android:layout_alignParentBottom="false"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/btnLike"
-        tools:text="Comment" />
-
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mlDescription"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentBottom="false"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="10dp"
         android:layout_toEndOf="@+id/btnComment"
-        tools:text="Save" />
+        android:background="#00FFFFFF"
+        android:padding="10dp"
+        app:srcCompat="@android:drawable/ic_input_get" />
+
 </RelativeLayout>
