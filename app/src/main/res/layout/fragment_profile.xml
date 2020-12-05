@@ -11,7 +11,9 @@
         android:id="@+id/tvUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="username" />
+        tools:text="username"
+        android:textColor="@android:color/black"
+        android:textSize="40dp"/>
 
     <Button
         android:id="@+id/btnLogout"

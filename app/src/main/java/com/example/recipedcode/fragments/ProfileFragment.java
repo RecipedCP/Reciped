@@ -55,7 +55,7 @@ public class ProfileFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        username = view.findViewById(R.id.etUsername);
+        username = view.findViewById(R.id.tvUsername);
         logout = view.findViewById(R.id.btnLogout);
 
         rvPosts = view.findViewById(R.id.rvPosts);
@@ -69,8 +69,11 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-//        ParseUser curUser = ParseUser.getCurrentUser();
-//        username.setText(curUser.getUsername());
+        String user = ParseUser.getCurrentUser().getUsername();
+        System.out.println("*********************************");
+        System.out.println(user);
+        System.out.println("*********************************");
+        username.setText(user);
 
         rvPosts.setAdapter(adapter);
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
