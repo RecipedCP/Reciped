@@ -111,7 +111,6 @@ Reciped is a app that allows users to post their recipes: photos, ingredients, a
       - (Read/GET) Query logged in user object
       
 ## Gif Walkthroughs:
-
 Walkthrough 1: 
 
 <img src='walkthrough1.gif' width='' alt='Video Walkthrough' />
@@ -124,4 +123,8 @@ Walkthrough 3:
 
 <img src='walkthrough3.gif' width='' alt='Video Walkthrough' />
 
+## Contributors: 
+* Dylan Ignacio – [Github](https://github.com/Dylan-Glo) – [Linkedin](https://www.linkedin.com/in/dylan-glo-ignacio-a423461b6/)
+* Alex Espinoza-Fuentes – [Github](https://github.com/AlexFue) – [Linkedin](https://www.linkedin.com/in/alex-espinoza-fuentes/)
+* Edward Cluster – [Github](https://github.com/ecluster) – [Linkedin](https://www.linkedin.com/in/edward-cluster/)
 
